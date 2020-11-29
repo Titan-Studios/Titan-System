@@ -36,9 +36,9 @@ module.exports = {
         const reply = new Discord.MessageEmbed()
         .setTitle(`You Did It!`)
         .setColor(`#BFFF00`)
-        .setDescription(`Your Post Has Been Uploaded To <#763790123950669854> Go Check It Out!`)
+        .setDescription(`Your Post Has Been Uploaded To <#757634366624235541> Go Check It Out!`)
         
-        const channel = await client.channels.fetch('763790123950669854')
+        const channel = await client.channels.fetch('757634366624235541')
 
         channel.send(embed).then((ticketMessage) => {
         ticketMessage.react('749837495117807696')
