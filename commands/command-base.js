@@ -81,10 +81,6 @@ module.exports = (client, commandOptions) => {
   // Listen for messages
   client.on('message', (message) => {
     const { member, content, guild } = message
-    
-    if(message.channel.type == "dm") {
-      return
-    }
 
     if(message.author.bot) {
       return
@@ -133,12 +129,12 @@ module.exports = (client, commandOptions) => {
           (maxArgs !== null && arguments.length > maxArgs)
         ) {
           message.channel.send(
-            `\`${prefix}${alias} ${expectedArgs}\``
+            `\`${expectedArgs}\``
           )
           return
         }
 
-        console.log(`Running '${prefix}${alias}' for ${message.author.username}`)
+        console.log(`Running '${prefix}${alias}' for ${message.author.tag}`)
 
         // Handle the custom command code
         callback(message, arguments, arguments.join(' '), client, command.size)
