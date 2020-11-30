@@ -81,10 +81,10 @@ module.exports = {
       })
 
   // Adds the user to the set so that they can't talk for a minute
-  talkedRecently.add(message.author.id);
+  talkedRecently.add(userMessage.author.id);
   setTimeout(() => {
     // Removes the user from the set after a minute
-    talkedRecently.delete(message.author.id);
+    talkedRecently.delete(userMessage.author.id);
   }, 11000000);
 }
 
