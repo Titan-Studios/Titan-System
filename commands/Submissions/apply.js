@@ -32,7 +32,7 @@ module.exports = {
   expectedArgs: ' - Make sure to read everything to know how to apply\n**Requirements**\n • Must Be 16+.\n • Must Be Level 25+.\n • Must Be In The Server For 2 Months Or More.\n • Must-Have Experience In Managing A Server.\n • Must Have 0 Warns In This Server.\n\n**Staff Positions**\n*You can select more than one.*\n Application Manager - Manages Staff app, Partner app etc\n Event & Giveaway Manager\n Help And Support - Responds and helps members\n Trust And Safety - Looks over members\n Server Manager\n Other - You tell us\n\n**Format**\n```\nt!apply\nStaff Position:\nWhy do you want staff?:\nServers Managed:\nWhat will you Do:\nDOB:\nHow Active Are You:\n```',
   callback: async (userMessage, arguments, text, client) => {
 
-    if(message.channel.type == "dm"){
+    if(userMessage.channel.type == "dm"){
       return message.channel.send('You cant use that command in DMs')
      }
     

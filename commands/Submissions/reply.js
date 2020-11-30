@@ -9,7 +9,7 @@ module.exports = {
     permissionError: 'You cant use that command!',
     callback: (message, arguments, text) => {
 
-        if(message.channel.type == "dm"){
+        if(userMessage.channel.type == "dm"){
             return message.channel.send('You cant use that command in DMs')
            }
 

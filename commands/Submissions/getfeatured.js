@@ -33,7 +33,7 @@ module.exports = {
   expectedArgs: '\n```\nt!getfeatured\nI would like to be featured\n!Nickname: Jelly Bean\nAge: (min age is 15)\nInfo: Some info about what you do\nLink/Site:\n```',
   callback: async (userMessage, arguments, text, client) => {
 
-    if(message.channel.type == "dm"){
+    if(userMessage.channel.type == "dm"){
       return message.channel.send('You cant use that command in DMs')
      }
     

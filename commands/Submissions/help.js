@@ -15,7 +15,12 @@ module.exports = {
     .addFields(
         {
             name: 'Submissions & Support',
-            value: 'apply - Apply for staff.\ncreator - Become a verified creator.\ngetfeatured - Become a featured creator.\npartner - Apply for partnership.\npost - Use this to post updates & artwork.\nreport - Report members to staff.\nsupport - Get help from the staff team for a issue.\ntitanshop - Open titans shop.',
+            value: '`apply` - Apply for staff.\n`creator` - Become a verified creator.\n`getfeatured` - Become a featured creator.\n`partner` - Apply for partnership.\n`post` - Use this to post updates & artwork or images.\n`report` - Report members to staff.\n`support` - Get help from the staff team for a issue.\n`titanshop` - Open titans shop.',
+            inline: false
+        },
+        {
+            name: 'Vip',
+            value: '`ask` - Ask Titan anything!.\n`request` - Request something from Titan.',
             inline: false
         },
 

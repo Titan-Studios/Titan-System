@@ -32,9 +32,9 @@ module.exports = {
   expectedArgs: '\n```\nt!creator\nLink/Web: https://twitter.com/User\nNickname: Jelly Bean\nWhat You Do: Im a Developer```',
   callback: async (userMessage, arguments, text, client) => {
 
-        if(message.channel.type == "dm"){
-         return message.channel.send('You cant use that command in DMs')
-        }
+    if(userMessage.channel.type == "dm"){
+      return message.channel.send('You cant use that command in DMs')
+     }
     
     const { guild, member } = userMessage
 

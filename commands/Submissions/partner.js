@@ -32,7 +32,7 @@ module.exports = {
   expectedArgs: '\n**Requirements**\n• No NSFW Servers. Unless The Verification Process Is High!\n• Server Must Have A Min Of 75 Members\n• Server Must Follow Discord TOS\n• Minimum member count 75\n\n**Format**\n```\nt!partner\nServer Info*:\nServer Link*:\nServer Members*:\nServer Age:\n```',
   callback: async (userMessage, arguments, text, client) => {
 
-    if(message.channel.type == "dm"){
+    if(userMessage.channel.type == "dm"){
       return message.channel.send('You cant use that command in DMs')
      }
     

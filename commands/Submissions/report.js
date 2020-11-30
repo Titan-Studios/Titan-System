@@ -32,7 +32,7 @@ module.exports = {
   expectedArgs: 't!report <user> <report message>',
   callback: async (userMessage, arguments, text, client) => {
 
-    if(message.channel.type == "dm"){
+    if(userMessage.channel.type == "dm"){
       return message.channel.send('You cant use that command in DMs')
      }
     

@@ -33,13 +33,17 @@ module.exports = {
   expectedArgs: 't!ask <question for titan>',
   callback: async (userMessage, arguments, text, client) => {
 
+    if(userMessage.channel.type == "dm"){
+      return message.channel.send('You cant use that command in DMs')
+     }
+
     const { guild, member } = userMessage
     
     if(userMessage.guild.id !== '708843719528284262') {
       return userMessage.reply('That command is only valid in **DSTitans Official Community**, `tinvite`')
     }
 
-    if(!userMessage.member.roles.has('741482855451983892')) {
+    if (!member.roles.cache.has('741482855451983892')) {
       return message.channel.send('Sorry, This command is Premium Collar Only, Subscribe to Titans patreon to unlock this command! `https://www.patreon.com/DSTitan`')
     }
     

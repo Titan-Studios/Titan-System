@@ -8,11 +8,15 @@ module.exports = {
     permissionError: 'You cant use that command!',
     callback: async (message, arguments, text, client) => {
 
-        if(message.channel.type == "dm"){
-         return message.channel.send('You cant use that command in DMs')
-        }
+      if(userMessage.channel.type == "dm"){
+        return message.channel.send('You cant use that command in DMs')
+       }
 
         const { guild, member } = message
+
+        if(message.channel.id !== '767426353393303582') {
+          return message.reply('Please use the post command in <#767426353393303582>')
+      }
 
         if (!member.roles.cache.has('730130685662199898')) {
           return message.channel.send(
