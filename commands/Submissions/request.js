@@ -33,7 +33,7 @@ module.exports = {
   callback: async (userMessage, arguments, text, client) => {
 
     if(userMessage.channel.type == "dm"){
-      return message.channel.send('You cant use that command in DMs')
+      return userMessage.channel.send('You cant use that command in DMs')
      }
 
     const { guild, member } = userMessage
@@ -43,7 +43,7 @@ module.exports = {
     }
 
     if (!member.roles.cache.has('750498216843149392')) {
-      return message.channel.send('Sorry, This command is Hyper Collar Only, Subscribe to Titans patreon to unlock this command! `https://www.patreon.com/DSTitan`')
+      return userMessage.channel.send('Sorry, This command is Hyper Collar Only, Subscribe to Titans patreon to unlock this command! `https://www.patreon.com/DSTitan`')
     }
 
     registerEvent(client)

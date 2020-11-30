@@ -33,7 +33,7 @@ module.exports = {
   callback: async (userMessage, arguments, text, client) => {
 
     if(userMessage.channel.type == "dm"){
-      return message.channel.send('You cant use that command in DMs')
+      return userMessage.channel.send('You cant use that command in DMs')
      }
     
     const mentions = userMessage.mentions.members.first()

@@ -9,12 +9,12 @@ module.exports = {
     permissionError: 'You cant use that command!',
     callback: (message, arguments, text) => {
 
-        if(userMessage.channel.type == "dm"){
+        if(message.channel.type == "dm"){
             return message.channel.send('You cant use that command in DMs')
            }
 
         if(message.guild.id !== '708843719528284262') {
-            return userMessage.reply('That command is only valid in **DSTitans Official Community**, `tinvite`')
+            return message.reply('That command is only valid in **DSTitans Official Community**, `tinvite`')
         }
 
         const mentions = message.mentions.members.first()

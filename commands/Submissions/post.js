@@ -9,7 +9,7 @@ module.exports = {
     callback: async (message, arguments, text, client) => {
 
       if(userMessage.channel.type == "dm"){
-        return message.channel.send('You cant use that command in DMs')
+        return userMessage.channel.send('You cant use that command in DMs')
        }
 
         const { guild, member } = message

@@ -47,8 +47,8 @@ module.exports = {
       return message.channel.send('Sorry, This command is Premium Collar Only, Subscribe to Titans patreon to unlock this command! `https://www.patreon.com/DSTitan`')
     }
     
-    if (talkedRecently.has(message.author.id)) {
-      message.channel.send("You cant ask Titan anything yet, You'll need to wait about 3 hours before asking him something again");
+    if (talkedRecently.has(userMessage.author.id)) {
+      userMessage.channel.send("You cant ask Titan anything yet, You'll need to wait about 3 hours before asking him something again");
 } else {
 
     registerEvent(client)
