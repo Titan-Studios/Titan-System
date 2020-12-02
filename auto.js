@@ -12,7 +12,7 @@ module.exports = async (client) =>{
       'Wanna become a Verified Creator? Use `t!creator`',
       'Add "Titan Bot" to your servers!',
       'Suggest commands to be added in <#762316868055990293>',
-      'Did you know Titan does most of the work in the community?',
+      'Did you know Siyntax is a cutie',
       'Hope everyones staying safe! Love you all!',
       'Hey, Maybe you should read our FAQ <#762540016006070302>',
       'Would you like to support Titan? Use `tdonate`',
