@@ -20,9 +20,10 @@ module.exports = {
       }
 
         if (!member.roles.cache.has('730130685662199898')) {
+          message.delete()
           return message.channel.send(
             `You need to be a verified creator to use this command!`
-          )
+          ).then(m => m.delete({timeout: 5000}))
           
         }
         
