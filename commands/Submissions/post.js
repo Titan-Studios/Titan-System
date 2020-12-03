@@ -32,7 +32,7 @@ module.exports = {
         let messageAttachment = message.attachments.size > 0 ? message.attachments.array()[0].url : null
 
         const embed = new Discord.MessageEmbed()
-        .setTitle(`New Post From **${user.username}**!`)
+        .setTitle(`Posted By **${user.username}**!`)
         .setDescription(`${text}`)
         .setImage(messageAttachment)
         .setColor(member.displayHexColor)
@@ -52,7 +52,7 @@ module.exports = {
         ticketMessage.react('❤️')
 
         message.reply(reply).then(m => m.delete({timeout: 5000}))
-        message.delete()
+       
       })
   
   
