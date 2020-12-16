@@ -44,12 +44,12 @@ client.on("guildMemberAdd", member => {
     const welcomeChannel = member.guild.channels.cache.find(channel => channel.id === '716634069970059286')
 
     let reply = [
-        `A wild ${member.username} just appeared!`,
-        `Hey the cutie ${member.username} is here!`,
-        `${member.username} did you bring any food`,
-        `OWO whats this? a ${member.username}.`,
-        `${member.username} slides in!`,
-        `${member.username} leave your weapons at the door`
+        `A wild ${member.tag} just appeared!`,
+        `Hey the cutie ${member.tag} is here!`,
+        `${member.tag} did you bring any food`,
+        `OWO whats this? a ${member.tag}.`,
+        `${member.tag} slides in!`,
+        `${member.tag} leave your weapons at the door`
 
     ]
     let repling = Math.floor((Math.random() * reply.length));
@@ -68,12 +68,12 @@ client.on("guildMemberRemove", member => {
     const welcomeChannel = member.guild.channels.cache.find(channel => channel.id === '716634069970059286')
 
     let reply = [
-        `See you later ${member.username}`,
-        `Nooo ${member.username} is no longer here..`,
-        `Come on ${member.username} we thought you would stay!`,
-        `Why did ${member.username} leave us.`,
-        `${member.username} where did you go!`,
-        `${member.username} ran away..`
+        `See you later ${member.tag}`,
+        `Nooo ${member.tag} is no longer here..`,
+        `Come on ${member.tag} we thought you would stay!`,
+        `Why did ${member.tag} leave us.`,
+        `${member.tag} where did you go!`,
+        `${member.tag} ran away..`
 
     ]
     let repling = Math.floor((Math.random() * reply.length));
