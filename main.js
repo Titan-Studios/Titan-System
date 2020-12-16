@@ -44,12 +44,12 @@ client.on("guildMemberAdd", member => {
     const welcomeChannel = member.guild.channels.cache.find(channel => channel.id === '716634069970059286')
 
     let reply = [
-        `A wild ${member} just appeared!`,
-        `Hey the cutie ${member} is here!`,
-        `${member} did you bring any food`,
-        `OWO whats this? a ${member}.`,
-        `${member} slides in!`,
-        `${member} leave your weapons at the door`
+        `A wild ${member.user.username} just appeared!`,
+        `Hey the cutie ${member.user.username} is here!`,
+        `${member.user.username} did you bring any food`,
+        `OWO whats this? a ${member.user.username}.`,
+        `${member.user.username} slides in!`,
+        `${member.user.username} leave your weapons at the door`
 
     ]
     let repling = Math.floor((Math.random() * reply.length));
@@ -59,6 +59,7 @@ client.on("guildMemberAdd", member => {
     .setTitle(reply[repling])
     .setDescription(`Hewo ${member}, Welcome!\n\nWe hope you have a great time and make new friends! Stream, play games, chill, share your thoughts and have loads of fun!\n\nTo become an official member of the community head over to <#716634466399027200>!`)
     .setFooter('If you want answers to questions read our FAQ')
+    .setThumbnail(`${member.user.displayAvatarURL()}`)
     .setImage('https://images-ext-1.discordapp.net/external/b2TIzRRPwzjmFMpeQuZ7WuH3-N7bbGpCu_2TOh91ExU/https/cdn.probot.io/Ey7ZxzY4BG.png?width=1025&height=258')
 
     welcomeChannel.send(embed)
@@ -68,12 +69,12 @@ client.on("guildMemberRemove", member => {
     const welcomeChannel = member.guild.channels.cache.find(channel => channel.id === '716634069970059286')
 
     let reply = [
-        `See you later ${member}`,
-        `Nooo ${member} is no longer here..`,
-        `Come on ${member} we thought you would stay!`,
-        `Why did ${member} leave us.`,
-        `${member} where did you go!`,
-        `${member} ran away..`
+        `See you later ${member.user.username}`,
+        `Nooo ${member.user.username} is no longer here..`,
+        `Come on ${member.user.username} we thought you would stay!`,
+        `Why did ${member.user.username} leave us.`,
+        `${member.user.username} where did you go!`,
+        `${member.user.username} ran away..`
 
     ]
     let repling = Math.floor((Math.random() * reply.length));
@@ -83,6 +84,7 @@ client.on("guildMemberRemove", member => {
     .setTitle(reply[repling])
     .setDescription(`Goodbye ${member},\n\n Hope you had a great time! see you again soon!`)
     .setFooter('Stay safe!')
+    .setThumbnail(`${member.user.displayAvatarURL()}`)
 
     welcomeChannel.send(embed)
 })
