@@ -29,7 +29,7 @@ const registerEvent = (client) => {
 module.exports = {
   commands: ['partner', 'partnership'],
   minArgs: 3,
-  expectedArgs: '\n**Requirements**\n• No NSFW Servers. Unless The Verification Process Is High!\n• Server Must Have A Min Of 75 Members\n• Server Must Follow Discord TOS\n• Minimum member count 75\n\n**Format**\n```\nt!partner\nServer Info*:\nServer Link*:\nServer Members*:\nServer Age:\n```',
+  expectedArgs: '\n**Requirements**\n• No NSFW Servers. Unless The Verification Process Is High.\n• Must Follow Discord TOS.\n• Minimum Member Count Of 75-100.\n• No Servers That Incorvages Hate Or Raid.\n\n**Format**\n```\nt!partner\nServer Info*:\nServer Link*:\nServer Members*:\nServer Age:\n```',
   callback: async (userMessage, arguments, text, client) => {
 
     if(userMessage.channel.type == "dm"){

@@ -5,7 +5,7 @@ const path = require('path')
 const fs = require('fs')
 const { Client, Intents } = require('discord.js');
 const client = new Client({ ws: { intents: Intents.ALL } }, { disableEveryone: true });
-const auto = require('./auto')
+//const auto = require('./auto')
 
 const config = require('./config.json')
 // Startup & Commands. 
@@ -37,7 +37,7 @@ client.on('ready' , async () => {
 
     readCommands('commands')
 
-    auto(client)
+    //auto(client)
 })
 
 client.on("guildMemberAdd", member => {
