@@ -38,6 +38,8 @@ module.exports = {
     
     const mentions = userMessage.mentions.members.first()
 
+    arguments.slice(0).join(' ')
+
     const { guild, member } = userMessage
 
     registerEvent(client)
