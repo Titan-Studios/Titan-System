@@ -58,7 +58,7 @@ module.exports = {
     })
 
     const reply = new Discord.MessageEmbed()
-    .setTitle(`Dont Worry! ${mentions.username} Has Been Reported!`)
+    .setTitle(`Dont Worry! ${mentions.user.username} Has Been Reported!`)
     .setDescription('Please wait while our staff team reviews the report, Expect a reply within 6-12 hours.')
     .setColor('RANDOM')
 
