@@ -44,7 +44,7 @@ module.exports = {
 
     const help = new Discord.MessageEmbed()
     .setTitle('A User Was Reported')
-    .setDescription(arguments.split(mentions).join(' '))
+    .setDescription(text)
     .setFooter(`Click the ${check} icon when this report has been resolved.`)
     .setColor('RANDOM')
     .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
