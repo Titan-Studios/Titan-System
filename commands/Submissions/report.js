@@ -38,15 +38,13 @@ module.exports = {
     
     const mentions = userMessage.mentions.members.first()
 
-    arguments.slice(0).join(' ')
-
     const { guild, member } = userMessage
 
     registerEvent(client)
 
     const help = new Discord.MessageEmbed()
-    .setTitle('User Reported')
-    .setDescription(text)
+    .setTitle('A User Was Reported')
+    .setDescription(arguments.split(mentions).join(' '))
     .setFooter(`Click the ${check} icon when this report has been resolved.`)
     .setColor('RANDOM')
     .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
