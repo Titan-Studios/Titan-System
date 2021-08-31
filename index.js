@@ -22,6 +22,7 @@ client.on('ready', () => {
     Modules.userJoinAndLeave(client);
     Modules.distubeMusic(distubeClient);
     Modules.button(client);
+    Modules.repeater();
 
     // Client status
     client.user.setActivity({
