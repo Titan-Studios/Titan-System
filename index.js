@@ -25,8 +25,8 @@ client.on('ready', () => {
 
     // Client status
     client.user.setActivity({
-        name: 'Vibe Music | t?help UwU',
-        type: 'LISTENING'
+        name: 't?help',
+        type: 'WATCHING'
     });
 });
 
