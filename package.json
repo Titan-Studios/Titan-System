@@ -23,8 +23,8 @@
     "@distube/spotify": "^0.4.1",
     "ajax": "^0.0.4",
     "axios": "^0.21.1",
-    "discord.js": "^13.0.1",
-    "distube": "^3.0.0-beta.34",
+    "discord.js": "^13.2.0",
+    "distube": "^3.0.1",
     "dotenv": "^9.0.2",
     "ffmpeg-static": "^4.4.0",
     "libsodium-wrappers": "^0.7.9",
@@ -37,6 +37,6 @@
     "spotify-uri": "^2.2.0",
     "spotify-url-info": "^2.2.3",
     "xml2js": "^0.4.23",
-    "ytdl-core": "^4.9.0"
+    "ytdl-core": "^4.9.1"
   }
 }
