@@ -1,5 +1,5 @@
 module.exports = [{
-    name: "Application",
+    name: "Application & Report",
     helpcommand: "{1} application",
     description: "Send applications to the server!",
     commands: [{
@@ -16,6 +16,11 @@ module.exports = [{
         name: "Partner",
         aliases: ["partner", "partnership", "ps"],
         description: "Send a app for partnership",
+        usage: "{1}"
+    }, {
+        name: "Report",
+        aliases: ["report"],
+        description: "Send a report to staff",
         usage: "{1}"
     }]
 }, {

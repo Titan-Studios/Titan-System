@@ -25,7 +25,7 @@ client.on('ready', () => {
 
     // Client status
     client.user.setActivity({
-        name: 't?help',
+        name: 't?help | ^1.0.1',
         type: 'WATCHING'
     });
 });
