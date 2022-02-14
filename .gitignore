@@ -39,7 +39,13 @@ build/Release
 
 # Dependency directories
 node_modules/
+build/
 jspm_packages/
+package-lock.json
+desktop.ini
+.vscode/
+src/data/giveaways.json
+command.txt
 
 # TypeScript v1 declaration files
 typings/
@@ -102,6 +108,3 @@ dist
 
 # TernJS port file
 .tern-port
-
-package-lock.json
-desktop.ini
