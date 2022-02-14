@@ -1,9 +1,7 @@
 //#region Dependencies
 import * as Discord from 'discord.js';
-import { column } from 'mathjs';
-import { client } from '../..';
 import * as Constructor from '../../../manager/constructor';
-import { Color, DiscordButton } from '../../../utility';
+import { Color, DiscordButton, Utils } from '../../../utility';
 //#endregion
 
 //#region Command

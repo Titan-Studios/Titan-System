@@ -35,13 +35,13 @@ client.on('ready', () => {
     Listener.OnGuildMemberRemove(client);
     Listener.OnGuildBanAdd(client);
 
-    client.user.setActivity({ name: `Looking over ${client.users.cache.size} members` });
+    client.user.setActivity({ type: 'WATCHING', name: `over ${client.users.cache.size} members` });
 });
 //#endregion
 
 //#region Initialize Commands
 export const initializeCommands = () => {
-    let commands = client.guilds.cache.get('762354992757604373')?.commands;
+    let commands = Data.INFO.devMode ? client.guilds.cache.get('762354992757604373')?.commands : client.application.commands;
     for (const command of Utility.commandBaseList) {
         if (command != undefined) command.initialize('AWAKE');
         if (command != undefined && command.type != 'MESSAGE') commands?.create({ name: command.name.toLowerCase(), description: command.description + '.', options: command.settings.options || [] });
@@ -59,7 +59,7 @@ setTimeout(() => {
                 profile.isPremium().then((p) => {
                     if (!p) {
                         m.kick('Must have a premium role in Titan Studios');
-                        g.channels.fetch(Data.SERVERS.PREMIUM.CHANNELS.MEMBERS).then((c) => {
+                        g.channels.fetch(Data.SERVERS.PREMIUM.CHANNELS.MEMBERS.ID).then((c) => {
                             if (c.isText()) c.send({ content: `Removed - ${m.user.tag} (${m.user.id}) (Not Premium Member) (Joined: <t:${(m?.joinedTimestamp / 1000).toFixed()}:R>)` });
                         });
                     }

@@ -14,13 +14,13 @@ export const OnGuildMemberRemove = (client: Discord.Client) => client.on('guildM
         profile.set().then(() => {
             profile.isPremium().then((p) => {
                 if (!p) {
-                    member.guild.channels.fetch(SERVERS.PREMIUM.CHANNELS.MEMBERS).then((c) => {
-                        if (c.isText()) c.send({ content: `Removed - ${member.user.tag} (${member.user.id}) (Not Premium Member) (Created: <t:${(member.joinedTimestamp / 1000).toFixed()}:R>)` });
+                    member.guild.channels.fetch(SERVERS.PREMIUM.CHANNELS.MEMBERS.ID).then((c) => {
+                        if (c.isText()) c.send({ content: `Removed - ${member.user.tag} (${member.user.id}) (Not Premium Member) (Joined: <t:${(member.joinedTimestamp / 1000).toFixed()}:R>)` });
                     });
                 }
                 else {
-                    member.guild.channels.fetch(SERVERS.PREMIUM.CHANNELS.MEMBERS).then((c) => {
-                        if (c.isText()) c.send({ content: `Left - ${member.user.tag} (${member.user.id}) (Premium Member) (Created: <t:${(member.joinedTimestamp / 1000).toFixed()}:R>)` });
+                    member.guild.channels.fetch(SERVERS.PREMIUM.CHANNELS.MEMBERS.ID).then((c) => {
+                        if (c.isText()) c.send({ content: `Left - ${member.user.tag} (${member.user.id}) (Premium Member) (Joined: <t:${(member.joinedTimestamp / 1000).toFixed()}:R>)` });
                     });
                 }
             });

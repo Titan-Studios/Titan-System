@@ -26,12 +26,12 @@ export const OnGuildMemberAdd = (client: Discord.Client) => client.on('guildMemb
             profile.isPremium().then((p) => {
                 if (!p) {
                     member.kick('Must have a premium role in Titan Studios');
-                    member.guild.channels.fetch(SERVERS.PREMIUM.CHANNELS.MEMBERS).then((c) => {
+                    member.guild.channels.fetch(SERVERS.PREMIUM.CHANNELS.MEMBERS.ID).then((c) => {
                         if (c.isText()) c.send({ content: `Joined + Removed - ${member.user.tag} (${member.user.id}) (Not Premium Member) (Created: <t:${(member.user.createdTimestamp / 1000).toFixed()}:R>)` });
                     });
                 }
                 else {
-                    member.guild.channels.fetch(SERVERS.PREMIUM.CHANNELS.MEMBERS).then((c) => {
+                    member.guild.channels.fetch(SERVERS.PREMIUM.CHANNELS.MEMBERS.ID).then((c) => {
                         if (c.isText()) c.send({ content: `Joined - ${member.user.tag} (${member.user.id}) (Premium Member) (Created: <t:${(member.user.createdTimestamp / 1000).toFixed()}:R>)` });
                     });
                 }

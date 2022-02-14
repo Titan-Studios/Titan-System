@@ -6,7 +6,7 @@ export const INFO = {
         modules: true,
         dashboard: false
     },
-    devMode: false,
+    devMode: true,
     devServer: '762354992757604373',
     devUsers: ['625487161092866107'],
     ids: {
@@ -63,7 +63,8 @@ export const SERVERS = {
         CHANNELS: {
             MAIN_CHAT: { ID: '738057618215403570' },
             ROLES: { ID: '716635158228369470' },
-            TERMS: { ID: '716634466399027200' }
+            TERMS: { ID: '716634466399027200' },
+            INBOX: { ID: '716634956587073536' },
         }
     }, STAFF: {
         ID: '761296265312206850',
@@ -75,7 +76,10 @@ export const SERVERS = {
     }, PREMIUM: {
         ID: '786246951757938778',
         ROLES: {},
-        CHANNELS: { MEMBERS: '942612252106838066' }
+        CHANNELS: {
+            MEMBERS: { ID: '942612252106838066' },
+            POSTS: { ID: '941911557393240115' }
+        }
     }
 };
 
@@ -87,8 +91,8 @@ export const CLIENT = {
 export const ENV = {
     CLIENT: {
         ENCRYPTION: process.env.ENCRYPTION_SECRET,
-        SECRET: process.env.CLIENT_SECRET,
-        TOKEN: process.env.CLIENT_TOKEN,
+        SECRET: INFO.devMode ? process.env.CLIENT_AUTH_SECRET : process.env.CLIENT_SECRET,
+        TOKEN: INFO.devMode ? process.env.CLIENT_AUTH_TOKEN : process.env.CLIENT_TOKEN,
         ID: process.env.CLIENT_ID
     },
     DATABASE: {
