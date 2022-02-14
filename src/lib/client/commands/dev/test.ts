@@ -9,7 +9,7 @@ import { Color, DiscordButton } from '../../../utility';
 //#region Command
 export = new (class extends Constructor.CommandBase {
     constructor() {
-        super(0.001, 'BOTH', 'Test', 'For testing', { aliases: ['test'], permissions: [] }, []);
+        super(0.000, 'BOTH', 'Test', 'For testing', { aliases: ['test'], permissions: [] }, []);
     }
 
     // Initialization
