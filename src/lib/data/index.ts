@@ -6,7 +6,7 @@ export const INFO = {
         modules: true,
         dashboard: false
     },
-    devMode: true,
+    devMode: false,
     devServer: '762354992757604373',
     devUsers: ['625487161092866107'],
     ids: {
@@ -87,8 +87,8 @@ export const CLIENT = {
 export const ENV = {
     CLIENT: {
         ENCRYPTION: process.env.ENCRYPTION_SECRET,
-        SECRET: process.env.CLIENT_AUTH_SECRET,
-        TOKEN: process.env.CLIENT_AUTH_TOKEN,
+        SECRET: process.env.CLIENT_SECRET,
+        TOKEN: process.env.CLIENT_TOKEN,
         ID: process.env.CLIENT_ID
     },
     DATABASE: {

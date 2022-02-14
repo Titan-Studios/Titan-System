@@ -34,6 +34,8 @@ client.on('ready', () => {
     Listener.OnGuildMemberAdd(client);
     Listener.OnGuildMemberRemove(client);
     Listener.OnGuildBanAdd(client);
+
+    client.user.setActivity({ name: `Looking over ${client.users.cache.size} members` });
 });
 //#endregion
 
