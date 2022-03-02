@@ -6,7 +6,7 @@ import { Profile } from '../../manager/constructor';
 export const OnGuildMemberRemove = (client: Discord.Client) => client.on('guildMemberRemove', (member) => {
     if (member.guild.id == SERVERS.MAIN.ID) {
         const channel = member.guild.channels.cache.find(channel => channel.id == SERVERS.MAIN.CHANNELS.MAIN_CHAT.ID);
-        if (channel.isText()) channel.send({ embeds: [new Discord.MessageEmbed({ description: `${member.user} Just Joined\nCreated <t:${(member.user.createdTimestamp / 1000).toFixed()}:R>${member.joinedTimestamp ? ' - Joined <t:' + (member.joinedTimestamp / 1000).toFixed() + ':R>' : ''}`, footer: { text: `ID: ${member.id}` }, color: Color.RED })] }).catch(() => { });
+        if (channel.isText()) channel.send({ embeds: [new Discord.MessageEmbed({ description: `${member.user} Just Left\nCreated <t:${(member.user.createdTimestamp / 1000).toFixed()}:R>${member.joinedTimestamp ? ' - Joined <t:' + (member.joinedTimestamp / 1000).toFixed() + ':R>' : ''}`, footer: { text: `ID: ${member.id}` }, color: Color.RED })] }).catch(() => { });
     }
     if (member.guild.id == SERVERS.PREMIUM.ID) {
         if (member.user.bot) return;
